@@ -1669,7 +1669,7 @@ client.on('message', message => {
             message.channel.send('Your class is the super rare class: **' + classes[11] + '**');
            } else {
                message.channel.send('You are succ mans.');
-           }
+           } 
        } else {
            message.channel.send('You are not high enough level to get your divine blessing. You need to be level 10. Your current level is: ' + xp[message.author.id].level);
        }
