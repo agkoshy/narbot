@@ -11,6 +11,12 @@ const haval = 224625607256965130;
 const loki = 523612684969574401;
 const shawn = 197962769696423936;
 const seb = 136672623542140929;
+const srn = 256441174926032897;
+const donqi = 136830856864989184;
+const fabio = 82997901051035648;
+const tyrese = 235633754390003712;
+const yasha = 181155554310357002;
+const hafiz = 142333941137932288;
 const dummy = 0;
 let pubecount = 10;
 let ocount = 0;
@@ -93,6 +99,23 @@ let legend = ["**King Haval**",
         "**Jansert Yasha**",
         "**Simps Pubert/Donqi**",
         "**Oil Tycoon Hafiz**"];
+
+let xp = require('./xp.json');
+
+let classes = ["Hero",  "Haram", "Whale", "Waifu General", "NEET", "Drunken Master", "Weird Mans", "Cap", "Boxer", "Saiyan", "Fighter", "Merchant"];
+let heroC = ["Beginner Hero", "Young Hero",	"Intermediate Hero", "Experienced Hero", "Great Hero", "Mighty Hero", "Fabled Hero", "Epic Hero", "Mythical Hero", "Legendary Hero"];
+let haramC = ["Haram Beginner", "Lesser Haram", "Medium Haram", "Higher Haram", "Great Haram", "Haram Knight", "Haram Captain", "Haram General", "Haram Prince", "Haram King"];
+let whaleC =["Baby Whale", "Small Whale", "Teenage Whale", "Whale", "Higher Whale", "Giant Whale", "Wailord", "Whale King", "Epic Whale", "Legendary Whale"];
+let wgeneralC = ["Slack Leader",	"Leader", "Experienced Leader",	"Captain", "Acclaimed Captain",	"Commander", "High Commander", "General", "Great General", "Great General Under The Waifus"];
+let NEETC = ["Shut-in", "Hardcore Shut-in", "Small Lesser NEET", "Lesser NEET", "NEET", "Advanced NEET", "Mighty NEET", "Epic NEET", "Supreme NEET",	"Supreme NEET Overlord"];
+let drunkC = ["Drunken Novice", "Drunken", "Drunken Pro", "Drunken Expert", "Drunken Master", "Mighty Drunken Master", "Fabled Drunken Master", "Epic Drunken Master", "Mythical Drunken Master", "Legendary Drunken Master"];
+let weirdC = ["PeepoWeird", "PepoWeird", "Weirdga", "PogWeird", "WeirdChamp",	"WeirdChampion", "FeelsWeirdMan", "MonkaWeird",	"WeirdKing", "WeirdLord"];
+let capC = ["Young Cap", "Small Lesser Cap", "Lesser Cap", "Cap", "Capistran", "Capper", "Capper Pro", "Capper Expert", "Master Capper", "King of Caps"];
+let boxerC = ["Beginner Boxer", "Intermediate Boxer", "Boxer Pro", "Boxer Expert", "Boxer Genius", "Boxer Master", "Famed Boxer", "Epic Boxer", "Mythical Boxer", "Legendary Boxer"];
+let saiyanC = ["Saiyan", "Great Ape Saiyan", "Kaioken Saiyan", "Super Saiyan", "Super Saiyan 2", "Super Saiyan 3", "Super Saiyan 4", "Super Saiyan God", "Super Saiyan Blue", "Ultra Instinct Saiyan"];
+let fighterC = ["Novice Fighter", "Intermediate Fighter", "Expert Fighter", "Notable Fighter", "Extraordinary Fighter", "Distinguished Fighter", "Master Fighter", "Epic Fighter Master", "Mythical Fighter Master", "Legendary Fighter Master"];
+let merchantC = ["Beginner Merchant", "Intermediate Merchant", "Expert Merchant", "Wealthy Merchant", "Known Merchant", "Notable Merchant", "Celebrated Merchant", "Renowed Magnate", "Epic Merchant Magnate", "Legendary Merchant Magnate"];
+
 // https://discordapp.com/oauth2/authorize?client_id=606880175464120329&scope=bot&permissions=1275448512
 
 client.once('ready', () => {
@@ -216,7 +239,7 @@ client.on('message', message => {
         .setThumbnail('https://i.imgur.com/4105Ab6.png')
         .addBlankField()
         .addField('Commands: ', '!news: Get the latest at Pepitos News!\n!h1: Single Pull\n!h10: Multi Pull\n!sugo: Details on sugofest\n!dream: One can only dream\n!narshop: Buy my' +  client.emojis.get('609115120726966277') + 'qzgems in exchange for your soul\n!qzgem: Check your' +  client.emojis.get('609115120726966277') + 'qzgems\n!haval: Pay respects to the king\n!hajimari: Play my very nice game\n!roll: Roll for your next attack(Only works in game)\n!exith1: Exit game.\n'
-        + '!haram: Soon :runner:')
+        + '!haram: Soon :runner:\n**NEW PATCH COMMANDS**:\n!oracle: Check your divine blessing!\n!status: Open your status page\n')
         .setColor('#FFFF00');
         message.channel.send(helpEmbed).catch(console.err);
 
@@ -228,14 +251,11 @@ client.on('message', message => {
     //GOLD: client.emojis.get('608426406627770368')
     //SILVERS: client.emojis.get('608426406271123469')
     if(message.content.startsWith(`${prefix}sugo`)) {
-        message.channel.send(client.emojis.get('608426406476775472') + '**FIRST SUGOFEST**' + client.emojis.get('608426406476775472') + '\n\nDUE TO A SPECIAL OCCASION, **THE SUGO IS LIVE!!!**\nTHE NEW BATCH IS INCLUDED SO KEEP A LOOKOUT\n**LEGEND RATES ARE 2X AND GOLD POSTERS ARE MORE LIKELY!!!!**\nAUGUST 8TH 12PM EST - AUGUST 12TH 11:59AM EST.\n\n' 
+        message.channel.send(client.emojis.get('608426406476775472') + '**OLD GODS SUGOFEST**' + client.emojis.get('608426406476775472') + '\n\nFirst Sugo is now over! Thank you for participating! Next Sugo will contain all new units from old times!! Stay tuned!\n\n' 
         + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368')
         + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368')
         + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368')
         + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368') + client.emojis.get('608426406627770368'));
-    }
-    function sugoInfo() {
-
     }
 
     if((message.content.startsWith(`${prefix}test`))) {
@@ -322,7 +342,7 @@ client.on('message', message => {
                 message.channel.send(legend[14] + '\n' + client.emojis.get('608426406476775472') +  'Ultra Super Rare! A legendary oil magnate who utilizes his riches to provide great strength.');
             }
             
-        } else if(rng_all < 80 && rng_all >= 10) {
+        } else if(rng_all < 40 && rng_all >= 10) {
             if(rng_rr == 0) {
                 message.channel.send('**' + rrs[0] + '**\n' + client.emojis.get('608426406627770368') +  'Super Rare! A god with unparalleled manga knowledge');
             }
@@ -378,7 +398,7 @@ client.on('message', message => {
                 message.channel.send('**' + rrs[17] + '**\n' + client.emojis.get('608426406627770368') +  'Super Rare! A dual unit with an identity crisis. They each have their own benefits for their team, however they gain the benefits of themselves and their dual partner due to identity crisis');
             }
 
-        } else if(rng_all <= 100 && rng_all >= 80) {
+        } else if(rng_all <= 100 && rng_all >= 40) {
            if(rng_silver == 0) {
                message.channel.send('**' + silvers[0] + '**\n' + client.emojis.get('608426406271123469') +  'Rare! A young swed who just started reading One Piece');
            }
@@ -460,11 +480,11 @@ client.on('message', message => {
         let rng_all = Math.floor((Math.random() * 100) + 1);
         
         
-        if(rng_all >= 1 && rng_all < 10) {
+        if(rng_all >= 1 && rng_all < 5) {
             return client.emojis.get('608426406476775472') + legend[rng_legend];
-        } else if (rng_all >= 10 && rng_all < 80) {
+        } else if (rng_all >= 10 && rng_all < 40) {
             return client.emojis.get('608426406627770368') + rrs[rng_rr];
-        } else if(rng_all >= 80 && rng_all <= 100) {
+        } else if(rng_all >= 40 && rng_all <= 100) {
             return client.emojis.get('608426406271123469') + silvers[rng_silver];
         }
     }
@@ -1144,23 +1164,12 @@ client.on('message', message => {
             if(err) console.log(err);
         });
     }
-    if((message.content === ('I love Pubert') || message.content === ('i love pubert') || message.content === ('I love pubert') || message.content === ('i love Pubert')) && !message.author.bot) {
-        coins[message.author.id] = {
-            coins: coins[message.author.id].coins + 200
-        };
-        message.react('608405346683322368');
-        message.react('607674158796636270');
-        message.react('607674124042502176');
-        fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
-            if(err) console.log(err);
-        });
-    }
     if(message.content.startsWith(`${prefix}qzgem`) && !message.author.bot) {
         let uCoins = coins[message.author.id].coins;
         let coinEmbed = new Discord.RichEmbed()
         .setAuthor(message.author.username)
         .setColor('#0000FF')
-        .addField('Rainbow Quartz Gems: ',  client.emojis.get('609115120726966277') + uCoins + '\n(You get 10 free' + client.emojis.get('609115120726966277') + 'per message.)');
+        .addField('Rainbow Quartz Gems: ', client.emojis.get('609115120726966277') + uCoins + '\n(You get 10 free' + client.emojis.get('609115120726966277') + 'per message.)');
         message.channel.send(coinEmbed).catch(console.error);
     }
     if(message.content.startsWith(`${prefix}narshop`) && !message.author.bot) {
@@ -1174,18 +1183,498 @@ client.on('message', message => {
         '+ 10 bonus' + client.emojis.get('609115120726966277') + '= i love being haram\n50 ' + client.emojis.get('609115120726966277') + 
         '+ 15 bonus' + client.emojis.get('609115120726966277') + '= im haram af\*\n80' + client.emojis.get('609115120726966277') + 
         '+ 20 bonus' + client.emojis.get('609115120726966277') + '= I want to be as haram as humza')
-        .addField('**SPECIAL:**', '150' + client.emojis.get('609115120726966277') + '+ 50 bonus' + client.emojis.get('609115120726966277') + '= I love pubert*')
-        .setFooter('*Must be the exact message.\n**sry nitro. \nSPECIAL only available until the end of the sugofest');
+        // .addField('**SPECIAL:**', '150' + client.emojis.get('609115120726966277') + '+ 50 bonus' + client.emojis.get('609115120726966277') + '= I love pubert*')
+        .setFooter('*Must be the exact message.\n**sry nitro. \n');
         message.channel.send(shopEmbed).catch(console.err);
     }
     if(message.content.startsWith(`${prefix}news`) && !message.author.bot) {
         let newsEmbed = new Discord.RichEmbed()
         .setTitle(client.emojis.get('606898724395941888') + ' **PEPITO\'S NEWS** ' + client.emojis.get('606898724395941888') + " ")
         .setColor('2FF2FB')
-        .addField('#1: **FIRST SUGOFEST** is now live!', 'Get your hands on some h1 exclusive characters!')
-        .addField('#2: **PUBERT GEM PACK** is now available!', 'Get your hands on some limited time' + client.emojis.get('609115120726966277') + 'qzgems!');
+        .addField('#1: **FIRST SUGOFEST** is now over!', 'Stay tuned for the next batch!')
+        .addField('#2: **PUBERT GEM PACK** is now over!', 'Never forget the cap that left!');
         message.channel.send(newsEmbed).catch(console.err);
     }
+    
+    if(!xp[message.author.id]) {
+        xp[message.author.id] = {
+            xp: 0,
+            level: 1,
+            str: 1,
+            dex: 1,
+            vit: 1,
+            int: 1,
+            fth: 1,
+            luk: 1,
+            cha: 1,
+            wis: 1,
+            count: -1,
+            xpb: 0,
+            class: 'Villager',
+            advclass: 'N/A'            
+        };
+    }
+    
+    let curCount = xp[message.author.id].count;
+    let xpAdd = 0;
+    let curxp = xp[message.author.id].xp;
+    let curlvl = xp[message.author.id].level;
+    let curstr = xp[message.author.id].str;
+    let curdex = xp[message.author.id].dex;
+    let curvit = xp[message.author.id].vit;
+    let curint = xp[message.author.id].int;
+    let curfth = xp[message.author.id].fth;
+    let curluk = xp[message.author.id].luk;
+    let curcha = xp[message.author.id].cha;
+    let curwis = xp[message.author.id].wis;
+    let nxtLvl = 0;
+    let xpbool = xp[message.author.id].xpb;
+    function xpaddition() {
+        if(xp[message.author.id].xpb == 0) {
+            return xpAdd = Math.floor(Math.random() * 7) + 20;
+        }
+        if(xp[message.author.id].xpb == 1) {
+            return xpAdd = Math.floor(Math.random() * 7) + 100;
+        }
+        if(xp[message.author.id].xpb == 2) {
+            return xpAdd = Math.floor(Math.random() * 7) + 500;
+        }
+        if(xp[message.author.id].xpb == 3) {
+            return xpAdd = Math.floor(Math.random() * 7) + 750;
+        }
+        if(xp[message.author.id].xpb == 4) {
+            return xpAdd = Math.floor(Math.random() * 7) + 1000;
+        }
+        if(xp[message.author.id].xpb == 5) {
+            return xpAdd = Math.floor(Math.random() * 7) + 2000;
+        }
+        if(xp[message.author.id].xpb == 6) {
+            return xpAdd = Math.floor(Math.random() * 7) + 4000;
+        }
+        if(xp[message.author.id].xpb == 7) {
+            return xpAdd = Math.floor(Math.random() * 7) + 10000;
+        }
+        if(xp[message.author.id].xpb == 8) {
+            return xpAdd = Math.floor(Math.random() * 7) + 12500;
+        }
+        if(xp[message.author.id].xpb == 9) {
+            return xpAdd = Math.floor(Math.random() * 7) + 900;
+        }
+        
+    }
+    function nxtLvlcalc() {
+        if(xp[message.author.id].xpb == 0) {
+            return nxtLvl = xp[message.author.id].level * 300;
+        }
+        if(xp[message.author.id].xpb == 1) {
+            return nxtLvl = xp[message.author.id].level * 600;
+        }
+        if(xp[message.author.id].xpb == 2) {
+            return nxtLvl = xp[message.author.id].level * 900;
+        }
+        if(xp[message.author.id].xpb == 3) {
+            return nxtLvl = xp[message.author.id].level * 1200;
+        }
+        if(xp[message.author.id].xpb == 4) {
+            return nxtLvl = xp[message.author.id].level * 1500;
+        }
+        if(xp[message.author.id].xpb == 5) {
+            return nxtLvl = xp[message.author.id].level * 1800;
+        }
+        if(xp[message.author.id].xpb == 6) {
+            return nxtLvl = xp[message.author.id].level * 2100;
+        }
+        if(xp[message.author.id].xpb == 7) {
+            return nxtLvl = xp[message.author.id].level * 2400;
+        }
+        if(xp[message.author.id].xpb == 8) {
+            return nxtLvl = xp[message.author.id].level * 2700;
+        }
+        if(xp[message.author.id].xpb == 9) {
+            return nxtLvl = xp[message.author.id].level * 3000;
+        }/* 
+        if(xp[message.author.id].xpb == 0) {
+            return nxtLvl = xp[message.author.id].level * 300;
+        }
+        if(xp[message.author.id].xpb == 1) {
+            return nxtLvl = xp[message.author.id].level * 900;
+        }
+        if(xp[message.author.id].xpb == 2) {
+            return nxtLvl = xp[message.author.id].level * 2700;
+        }
+        if(xp[message.author.id].xpb == 3) {
+            return nxtLvl = xp[message.author.id].level * 8100;
+        }
+        if(xp[message.author.id].xpb == 4) {
+            return nxtLvl = xp[message.author.id].level * 24300;
+        }
+        if(xp[message.author.id].xpb == 5) {
+            return nxtLvl = xp[message.author.id].level * 72900;
+        }
+        if(xp[message.author.id].xpb == 6) {
+            return nxtLvl = xp[message.author.id].level * 218700;
+        }
+        if(xp[message.author.id].xpb == 7) {
+            return nxtLvl = xp[message.author.id].level * 656100;
+        }
+        if(xp[message.author.id].xpb == 8) {
+            return nxtLvl = xp[message.author.id].level * 1968300;
+        }
+        if(xp[message.author.id].xpb == 9) {
+            return nxtLvl = xp[message.author.id].level * 5904900;
+        } */
+    }
+    let statarr = [1, 2, 5, 8, 10, 25, 50, 100, 200, 500];
+    
+    let diffLvl = nxtLvlcalc() - curxp;
+    xp[message.author.id].xp = xp[message.author.id].xp + xpaddition();
+
+    function advancedClass(count) {
+        if(xp[message.author.id].class == classes[0]) {
+            return xp[message.author.id].advclass = heroC[count]; 
+        }
+        if(xp[message.author.id].class == classes[1]) {
+            return xp[message.author.id].advclass = haramC[count]; 
+        }
+        if(xp[message.author.id].class == classes[2]) {
+            return xp[message.author.id].advclass = whaleC[count]; 
+        }
+        if(xp[message.author.id].class == classes[3]) {
+            return xp[message.author.id].advclass = wgeneralC[count]; 
+        }
+        if(xp[message.author.id].class == classes[4]) {
+            return xp[message.author.id].advclass = NEETC[count]; 
+        }
+        if(xp[message.author.id].class == classes[5]) {
+            return xp[message.author.id].advclass = drunkC[count]; 
+        }
+        if(xp[message.author.id].class == classes[6]) {
+            return xp[message.author.id].advclass = weirdC[count]; 
+        }
+        if(xp[message.author.id].class == classes[7]) {
+            return xp[message.author.id].advclass = capC[count]; 
+        }
+        if(xp[message.author.id].class == classes[8]) {
+            return xp[message.author.id].advclass = boxerC[count]; 
+        }
+        if(xp[message.author.id].class == classes[9]) {
+            return xp[message.author.id].advclass = saiyanC[count]; 
+        }
+        if(xp[message.author.id].class == classes[10]) {
+            return xp[message.author.id].advclass = fighterC[count]; 
+        }
+        if(xp[message.author.id].class == classes[11]) {
+            return xp[message.author.id].advclass = merchantC[count]; 
+        }
+    }
+    if(nxtLvlcalc() <= xp[message.author.id].xp && xp[message.author.id].level < 100) {
+        xp[message.author.id].level = curlvl + 1;
+        
+        if(message.author.id == haval) {
+            xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+       if(message.author.id == humza) {
+          //  xp[message.author.id].str = curstr statarr[xp[message.author.id].xpb];
+            xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == fei) {
+        //    xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+        //    xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+        //    xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+        //    xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == loki || message.author.id == srn) {
+            xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == donqi) {
+         //   xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == seb) {
+           // xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == shawn) {
+            xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+           // xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+           // xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == yasha) {
+          //  xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == hafiz) {
+         //   xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == tyrese) {
+            xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+        //    xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == pubert) {
+            xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+         //   xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+           // xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+          //  xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        }
+        if(message.author.id == fabio) {
+            //xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb];
+           // xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb];
+           // xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb];
+            xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb];
+           // xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+           // xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb];
+        } 
+        if (xp[message.author.id].level > 10) {
+            if(message.author.id == humza) {
+                xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == fei) {
+                xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == loki || message.author.id == srn) {
+               
+                xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == donqi) {
+                xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == seb) {
+                xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == shawn) {
+                xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == yasha) {
+                xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == hafiz) {
+                xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].dex = curdex + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == tyrese) {
+                xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == pubert) {
+                xp[message.author.id].vit = curvit + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].luk = curluk + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb - 1];
+            }
+            if(message.author.id == fabio) {
+                xp[message.author.id].str = curstr + statarr[xp[message.author.id].xpb];
+                xp[message.author.id].int = curint + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].fth = curfth + statarr[xp[message.author.id].xpb - 1];
+                xp[message.author.id].cha = curcha + statarr[xp[message.author.id].xpb];
+                xp[message.author.id].wis = curwis + statarr[xp[message.author.id].xpb - 1];
+            }
+        }
+        if (xp[message.author.id].level % 10 == 0) {
+            xp[message.author.id].count = xp[message.author.id].count + 1;
+            xp[message.author.id].xpb = xp[message.author.id].xpb + 1; 
+            if(message.author.id == haval) {
+                xp[message.author.id].class = classes[0];
+            }
+            if(message.author.id == humza) {
+                xp[message.author.id].class = classes[1];
+            }
+            if(message.author.id == loki ||  message.author.id == srn) {
+                xp[message.author.id].class = classes[2];
+            }
+            if(message.author.id == fei) {
+                xp[message.author.id].class = classes[3];
+            }
+            if(message.author.id == donqi) {
+                xp[message.author.id].class = classes[4];
+            }
+            if(message.author.id == fabio) {
+                xp[message.author.id].class = classes[5];
+            }
+            if(message.author.id == seb) {
+                xp[message.author.id].class = classes[6];
+            }
+            if(message.author.id == pubert) {
+                xp[message.author.id].class = classes[7];
+            }
+            if(message.author.id == tyrese) {
+                xp[message.author.id].class = classes[8];
+            }
+            if(message.author.id == shawn) {
+                xp[message.author.id].class = classes[9];
+            }
+            if(message.author.id == yasha) {
+                xp[message.author.id].class = classes[10];
+            }
+            if(message.author.id == hafiz) {
+                xp[message.author.id].class = classes[11];
+            }
+            let advEmbed = new Discord.RichEmbed()
+            .setTitle('Class Advancement!')
+            .setColor('#850f75')
+            .addField('Class ' + xp[message.author.id].class, 'You have advanced into **' + advancedClass(xp[message.author.id].count) + '**');
+            message.channel.send(advEmbed);
+        }
+        
+        let lvlUpEmbed = new Discord.RichEmbed()
+        .setTitle('You have leveled up!')
+        .setColor('#eb4710')
+        .addField('Level', xp[message.author.id].level, true)
+        .addField('XP', xp[message.author.id].xp, true)
+        .addField('Status: ', 'STR: ' + xp[message.author.id].str + '\(\+' + (xp[message.author.id].str - curstr) + ')\n' 
+        + 'DEX: ' + xp[message.author.id].dex + '\(\+' + (xp[message.author.id].dex - curdex) + ')\n' + 'VIT: ' + xp[message.author.id].vit + '\(\+' + (xp[message.author.id].vit - curvit) + ')\n'
+        + 'INT: ' + xp[message.author.id].int + '\(\+' + (xp[message.author.id].int - curint) + ')\n' + 'FTH: ' + xp[message.author.id].fth + '\(\+' + (xp[message.author.id].fth - curfth) + ')\n' + 
+        'LUK: ' + xp[message.author.id].luk + '\(\+' + (xp[message.author.id].luk - curluk) + ')\n' + 'CHA: ' + xp[message.author.id].cha + '\(\+' + (xp[message.author.id].cha - curcha) + ')\n' + 'WIS: ' + xp[message.author.id].wis + '\(\+' + (xp[message.author.id].wis - curwis) + ')\n')
+        .setFooter(`${diffLvl} XP needed for next level up!`, message.author.displayAvatarURL);
+        message.channel.send(lvlUpEmbed);
+         
+    }
+    if(xp[message.author.id].level >= 100) {
+        xp[message.author.id].level = 100;
+    }
+
+    if(message.content.startsWith(`${prefix}status`)) {
+        let statEmbed = new Discord.RichEmbed()
+        .setTitle('Status Page')
+        .setColor('#22f2a2')
+        .addField('Class: ' , xp[message.author.id].class)
+        .addField('Advanced Class: ', xp[message.author.id].advclass)
+        .addField('Level', xp[message.author.id].level, true)
+        .addField('XP', xp[message.author.id].xp, true)
+        .addField('Status: ', 'STR: ' + xp[message.author.id].str + '\n' 
+        + 'DEX: ' + xp[message.author.id].dex + '\n' + 'VIT: ' + xp[message.author.id].vit + '\n'
+        + 'INT: ' + xp[message.author.id].int + '\n' + 'FTH: ' + xp[message.author.id].fth + '\n' + 
+        'LUK: ' + xp[message.author.id].luk + '\n' + 'CHA: ' + xp[message.author.id].cha + '\n' + 'WIS: ' + xp[message.author.id].wis + '\n')
+        .setFooter(`${diffLvl} XP needed for next level up!`, message.author.displayAvatarURL);
+        message.channel.send(statEmbed);
+    }
+    fs.writeFile('./xp.json', JSON.stringify(xp), (err) => {
+        if(err) console.log(err);
+    });
+
+    if(message.content.startsWith(`${prefix}oracle`)) {
+       if(xp[message.author.id].level >= 10) {
+           if(message.author.id == haval) {
+               message.channel.send('Your class is the legendary class: **' + classes[0] + '**');
+           } else if(message.author.id == humza) {
+            message.channel.send('Your class is the secret mythical class: **' + classes[1] + '**');
+           } else if(message.author.id == loki || message.author.id == srn) {
+            message.channel.send('Your class is the secret advanced class: **' + classes[2] + '**');
+           } else if(message.author.id == fei) {
+            message.channel.send('Your class is the epic class: **' + classes[3] + '**');
+           } else if(message.author.id == donqi) {
+            message.channel.send('Your class is the hidden class: **' + classes[4] + '**');
+           } else if(message.author.id == fabio) {
+            message.channel.send('Your class is the ultimate class: **' + classes[5] + '**');
+           } else if(message.author.id == seb) {
+            message.channel.send('Your class is the epic class: **' + classes[6] + '**');
+           } else if(message.author.id == pubert) {
+            message.channel.send('Your class is the pubert class: **' + classes[7] + '**');
+           } else if(message.author.id == tyrese) {
+            message.channel.send('Your class is the ultimate class: **' + classes[8] + '**');
+           } else if(message.author.id == shawn) {
+            message.channel.send('Your class is the legendary class: **' + classes[9] + '**');
+           } else if(message.author.id == yasha) {
+            message.channel.send('Your class is the ultimate class: **' + classes[10] + '**');
+           } else if(message.author.id == hafiz) {
+            message.channel.send('Your class is the super rare class: **' + classes[11] + '**');
+           } else {
+               message.channel.send('You are succ mans.');
+           }
+       } else {
+           message.channel.send('You are not high enough level to get your divine blessing. You need to be level 10. Your current level is: ' + xp[message.author.id].level);
+       }
+    }
+
     //qzgem: 609115120726966277
     //moon2H: 502706928170827777
     //moon2S: 606898724395941888
